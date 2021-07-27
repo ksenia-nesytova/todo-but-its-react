@@ -36,9 +36,13 @@ code {
 .todoItem {
   display: flex;
   flex-direction: row;
-  padding: 1em;
+  padding: 1em 1em 0;
+  width: 60%;
   color: #333333;
   font-weight: 100;
+  border-bottom: 1px solid #cecece;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 input[type="checkbox"] {
