@@ -52,3 +52,12 @@ input[type="checkbox"] {
 input[type=checkbox]:focus {
     outline: 0;
 }
+
+input[type=checkbox]:checked {
+    opacity: 35%;
+}
+
+input[type=checkbox]:checked + p{
+    opacity: 35%;
+    text-decoration: line-through;
+}
