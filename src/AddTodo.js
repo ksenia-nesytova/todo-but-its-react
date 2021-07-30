@@ -8,15 +8,17 @@ function AddTodo(props) {
   }
 
   function handleSubmit(e) {
-
+    e.preventDefault()
+    props.addTask(text)
   }
 
+
   return(
-    <input type="text" id="addTodo-input" value={text} placeholder="Add new todo" onChange={handleChange} />
+    <div>
+      <input type="text" id="addTodo-input" value={text} placeholder="Add new todo" onChange={handleChange} />
+      <button type="submit" onClick={handleSubmit}>Add</button>
+    </div>
   )
 }
-
-
-
 
 export default AddTodo

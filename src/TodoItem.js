@@ -6,7 +6,7 @@ function TodoItem(props) {
   return(
     <div className="todoItem">
       <input type="checkbox" checked={checked} onChange={() => setChecked(!checked)}/>
-      <p>{props.item.text}</p>
+      <p>{props.task.text}</p>
     </div>
   )
 }
