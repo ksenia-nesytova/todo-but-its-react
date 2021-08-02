@@ -1,3 +1,10 @@
+:root {
+  --body-bg-color: whitesmoke;
+  --main-bg-color:#FFFF88;
+  --accent-color: #cecece;
+}
+
+
 body {
 
   font-family:'Roboto', 'Segoe UI', 'Oxygen',
@@ -27,7 +34,7 @@ code {
 
   align-items: center;
 
-  background: #FFFF88;
+  background: var(--main-bg-color);
   border: 1px solid black;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -39,9 +46,24 @@ code {
   width: 60%;
   color: #333333;
   font-weight: 100;
-  border-bottom: 1px solid #cecece;
+  border-bottom: 1px solid var(--accent-color);
   justify-content: flex-start;
   align-items: center;
+}
+
+#addTodo {
+  max-width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#addTodo-input {
+  background-color: var(--body-bg-color);
+  outline: none;
+  border-width: 0 0 1px;
+  border-color: var(--accent-color);
+  font-size: 1.3em;
+  line-height: 2;
 }
 
 input[type="checkbox"] {

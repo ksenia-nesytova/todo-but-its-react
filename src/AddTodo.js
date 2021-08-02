@@ -14,7 +14,7 @@ function AddTodo(props) {
 
 
   return(
-    <div>
+    <div id="addTodo">
       <input type="text" id="addTodo-input" value={text} placeholder="Add new todo" onChange={handleChange} />
       <button type="submit" onClick={handleSubmit}>Add</button>
     </div>
