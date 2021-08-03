@@ -4,7 +4,7 @@ import TodoItem from './TodoItem';
 import todosData from "./todosData"
 import AddTodo from "./AddTodo"
 import React, { useState } from "react"
-
+import { nanoid } from "nanoid";
 
 
 function App(props) {
@@ -14,7 +14,7 @@ function App(props) {
 
 // Temporary
   function addTask(text) {
-    const newTodo = { id: "id", text: text, completed: false };
+    const newTodo = { id: nanoid(), text: text, completed: false };
     displayTasks([...tasks, newTodo])
   }
 
