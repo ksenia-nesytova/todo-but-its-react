@@ -10,6 +10,7 @@ function AddTodo(props) {
   function handleSubmit(e) {
     e.preventDefault()
     props.addTask(text)
+    setText("")
   }
 
 
