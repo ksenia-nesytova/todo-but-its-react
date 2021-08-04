@@ -18,7 +18,8 @@ function App(props) {
   }
 
   function deleteTask(id) {
-      console.log("deleted")
+    const tasksRemaining = tasks.filter(task => id !==task.id)
+    displayTasks(tasksRemaining)
   }
 
   return (
