@@ -25,7 +25,8 @@ function App(props) {
   return (
     <>
     <div className="todoList">
-    {todoItems}
+      {todoItems.length < 1 && <h2>You have nothing to do</h2>}
+      {todoItems}
     </div>
     <AddTodo addTask={addTask} />
     </>
