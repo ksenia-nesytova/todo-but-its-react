@@ -1,7 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
 import TodoItem from './TodoItem';
-import todosData from "./todosData"
 import AddTodo from "./AddTodo"
 import React, { useState } from "react"
 import { nanoid } from "nanoid";
@@ -10,7 +8,7 @@ import { nanoid } from "nanoid";
 function App(props) {
   const [tasks, displayTasks] = useState(props.tasks);
 
-  const todoItems = tasks.map(task => <TodoItem task={task} id={task.id} completed={task.completed} key={task.id} deleteTask={deleteTask}/>)
+  const todoItems = tasks.map(task => <TodoItem task={task} id={task.id} completed={task.completed} key={task.id} deleteTask={deleteTask} editTask={editTask}/>)
 
   function addTask(text) {
     const newTodo = { id: "item" + nanoid(), text: text, completed: false };
@@ -20,6 +18,18 @@ function App(props) {
   function deleteTask(id) {
     const tasksRemaining = tasks.filter(task => id !==task.id)
     displayTasks(tasksRemaining)
+  }
+
+  function editTask(id, newText) {
+    const todoItemsEdited = tasks.map(
+      task => {
+        if(id === task.id) {
+          return{...task, text: newText}
+        }
+        return task
+      }
+    )
+    displayTasks(todoItemsEdited)
   }
 
   return (
