@@ -99,12 +99,17 @@ input[type=checkbox]:checked + p{
     text-decoration: line-through;
 }
 
-.deleteTodo {
+.deleteTodo, .editTodo {
   border: none;
   background: transparent;
   opacity: 35%;
 }
 
-.deleteTodo:hover, .deleteTodo:focus {
+.deleteTodo:hover, .deleteTodo:focus, .editTodo:hover,
+.editTodo:focus {
   opacity: 100%;
+}
+
+.editTodo {
+
 }
