@@ -4,9 +4,7 @@
   --accent-color: #cecece;
 }
 
-
 body {
-
   font-family:'Roboto', 'Segoe UI', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -17,11 +15,6 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-color: whitesmoke;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
 
 .todoList {
@@ -59,28 +52,6 @@ code {
   justify-content: center;
 }
 
-#addTodo-input {
-  background-color: var(--body-bg-color);
-  outline: none;
-  border-width: 0 0 1px;
-  border-color: var(--accent-color);
-  line-height: 2;
-}
-
-#addTodo-input, #addTodo-btn {
-  font-size: 1.3em;
-}
-
-#addTodo-btn {
-  font-weight: bold;
-  background: var(--main-bg-color);
-
-  margin-left: -1em;
-  padding: .5em 1.5em;
-
-  border-radius: 5px;
-  border: 1px solid black;
-}
 
 input[type="checkbox"] {
   margin-right: 0.6em;
@@ -99,17 +70,46 @@ input[type=checkbox]:checked + p{
     text-decoration: line-through;
 }
 
-.deleteTodo, .editTodo {
+button{
   border: none;
   background: transparent;
   opacity: 35%;
 }
 
-.deleteTodo:hover, .deleteTodo:focus, .editTodo:hover,
-.editTodo:focus {
+button:hover,
+button:focus {
   opacity: 100%;
 }
 
-.editTodo {
+input[type=text] {
+  background: transparent;
+  margin-left: 2em;
+  outline: none;
+  font-size: .9em;
+  border-width: 0;
+}
 
+
+#addTodo-input {
+  background-color: var(--body-bg-color);
+  border-color: var(--accent-color);
+  line-height: 2;
+  border-width: 0 0 1px;
+
+}
+
+#addTodo-input, #addTodo-btn {
+  font-size: 1.3em;
+}
+
+#addTodo-btn {
+  font-weight: bold;
+  background: var(--main-bg-color);
+  opacity: 100%;
+
+  margin-left: -1em;
+  padding: .5em 1.5em;
+
+  border-radius: 5px;
+  border: 1px solid black;
 }
