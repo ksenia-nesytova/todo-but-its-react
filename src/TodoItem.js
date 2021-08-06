@@ -27,7 +27,7 @@ function handleSubmit(e) {
   )
   const editingTemplate = (
     <div className="todoItem">
-      <input type="text" onChange={handleChange}/>
+      <input type="text" defaultValue={props.task.text} onChange={handleChange}/>
       <p>{props.task.text}</p>
       <button type="submit" className="editSave" onClick={handleSubmit}>save</button>
       <button type="button" className="editCancel" onClick={() => setBeingEdited(false)}>cancel</button>
