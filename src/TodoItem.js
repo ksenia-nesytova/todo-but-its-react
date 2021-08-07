@@ -5,6 +5,7 @@ function TodoItem(props) {
   const [isBeingEdited, setBeingEdited] = useState(false);
   const [newText, setNewText] = useState(props.task.text);
 
+
 function handleChange(e) {
   setNewText(e.target.value);
 }

@@ -113,3 +113,11 @@ input[type=text] {
   border-radius: 5px;
   border: 1px solid black;
 }
+
+/* .filterBtn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+} */
