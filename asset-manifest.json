@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/todo-but-its-react/static/css/main.b5484e5e.chunk.css",
+    "main.js": "/todo-but-its-react/static/js/main.2e63e8a3.chunk.js",
+    "main.js.map": "/todo-but-its-react/static/js/main.2e63e8a3.chunk.js.map",
+    "runtime-main.js": "/todo-but-its-react/static/js/runtime-main.f6ff0a3f.js",
+    "runtime-main.js.map": "/todo-but-its-react/static/js/runtime-main.f6ff0a3f.js.map",
+    "static/js/2.93bfd0c1.chunk.js": "/todo-but-its-react/static/js/2.93bfd0c1.chunk.js",
+    "static/js/2.93bfd0c1.chunk.js.map": "/todo-but-its-react/static/js/2.93bfd0c1.chunk.js.map",
+    "static/js/3.48db0f7d.chunk.js": "/todo-but-its-react/static/js/3.48db0f7d.chunk.js",
+    "static/js/3.48db0f7d.chunk.js.map": "/todo-but-its-react/static/js/3.48db0f7d.chunk.js.map",
+    "index.html": "/todo-but-its-react/index.html",
+    "static/css/main.b5484e5e.chunk.css.map": "/todo-but-its-react/static/css/main.b5484e5e.chunk.css.map",
+    "static/js/2.93bfd0c1.chunk.js.LICENSE.txt": "/todo-but-its-react/static/js/2.93bfd0c1.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f6ff0a3f.js",
+    "static/js/2.93bfd0c1.chunk.js",
+    "static/css/main.b5484e5e.chunk.css",
+    "static/js/main.2e63e8a3.chunk.js"
+  ]
+}
