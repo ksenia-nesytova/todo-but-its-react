@@ -30,7 +30,14 @@ function App(props) {
 
   const todoItems = tasks
   .filter(FILTER_MAP[filter])
-  .map(task => <TodoItem task={task} id={task.id} completed={task.completed} key={task.id} deleteTask={deleteTask} editTask={editTask}       toggleTaskCompleted={toggleTaskCompleted}/>);
+  .map(task => <TodoItem
+    task={task}
+    id={task.id}
+    completed={task.completed}
+    key={task.id}
+    deleteTask={deleteTask}
+    editTask={editTask}       toggleTaskCompleted={toggleTaskCompleted}
+  />);
 
 
   const filterList = FILTER_NAMES.map(name => (
@@ -39,6 +46,7 @@ function App(props) {
       name={name}
       isPressed={name === filter}
       setFilter={setFilter}
+      className="filterBtn"
     />
   ));
 
@@ -72,7 +80,9 @@ function App(props) {
       {todoItems}
     </div>
     <AddTodo addTask={addTask} />
-    {filterList}
+    <div className="filters">
+      {filterList}
+    </div>
     </>
   );
 }

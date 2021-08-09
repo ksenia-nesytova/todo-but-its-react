@@ -34,6 +34,7 @@ body {
 }
 
 .todoItem {
+  font-size: 1.3em;
   display: flex;
   flex-direction: row;
   padding: 1em 1em 0;
@@ -114,10 +115,14 @@ input[type=text] {
   border: 1px solid black;
 }
 
-/* .filterBtn {
+.filters {
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: center;
-  margin: 0 auto;
-} */
+  margin: 2em auto;
+  }
+
+  .filterBtn {
+    font-size: 1.1em;
+    margin-left: 1.1em;
+  }

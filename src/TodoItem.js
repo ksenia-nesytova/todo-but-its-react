@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 
+
 function TodoItem(props) {
   const [completed, setCompleted] = useState(false);
   const [isBeingEdited, setBeingEdited] = useState(false);
@@ -17,7 +18,6 @@ function TodoItem(props) {
     props.editTask(props.id, newText);
     setNewText(newText)
     setBeingEdited(false)
-
   }
 
     const displayTemplate = (
@@ -30,13 +30,14 @@ function TodoItem(props) {
     )
     const editingTemplate = (
       <div className="todoItem">
-        <input
-          id={props.id}
+      <input
+        id={props.id}
          type="text"
          defaultValue={props.task.text}
          value={newText}
          onChange={handleChange}
-         ref={inputRef}/>
+         ref={inputRef}
+        />
         <button type="submit" onClick={handleSubmit}>save</button>
         <button type="button" onClick={() => setBeingEdited(false)}>cancel</button>
       </div>
@@ -45,8 +46,10 @@ function TodoItem(props) {
     useEffect(() => {
       if(isBeingEdited) {
         inputRef.current.focus();
+      } else {
+        buttonRef.current.focus();
       }
-    }, [isBeingEdited])
+    }, [isBeingEdited]);
 
     return(isBeingEdited ? editingTemplate : displayTemplate)
 }
