@@ -18,9 +18,19 @@ function App(props) {
 
   const FILTER_NAMES = Object.keys(FILTER_MAP)
 
+  function toggleTaskCompleted(id) {
+    const tasksUpdated = tasks.map(task => {
+      if(id === task.id) {
+        return {...task, completed:!task.completed}
+      }
+      return task
+    })
+    displayTasks(tasksUpdated)
+  }
+
   const todoItems = tasks
   .filter(FILTER_MAP[filter])
-  .map(task => <TodoItem task={task} id={task.id} completed={task.completed} key={task.id} deleteTask={deleteTask} editTask={editTask}/>);
+  .map(task => <TodoItem task={task} id={task.id} completed={task.completed} key={task.id} deleteTask={deleteTask} editTask={editTask}       toggleTaskCompleted={toggleTaskCompleted}/>);
 
 
   const filterList = FILTER_NAMES.map(name => (
@@ -53,6 +63,7 @@ function App(props) {
     )
     displayTasks(todoItemsEdited)
   }
+
 
   return (
     <>

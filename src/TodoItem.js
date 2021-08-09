@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function TodoItem(props) {
-  const [checked, setChecked] = useState(false);
+  const [completed, setCompleted] = useState(false);
   const [isBeingEdited, setBeingEdited] = useState(false);
   const [newText, setNewText] = useState(props.task.text);
 
@@ -20,7 +20,7 @@ function handleSubmit(e) {
 
   const displayTemplate = (
     <div className="todoItem">
-      <input type="checkbox" checked={checked} onChange={() => setChecked(!checked)}/>
+      <input type="checkbox" checked={props.completed} onChange={() =>  props.toggleTaskCompleted(props.id)}/>
       <p>{props.task.text}</p>
       <button type="button" onClick={() => props.deleteTask(props.id)}>x</button>
       <button type="button" onClick={() => setBeingEdited(true)}>edit</button>
