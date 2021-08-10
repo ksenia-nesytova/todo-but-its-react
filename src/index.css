@@ -63,11 +63,11 @@ input[type=checkbox]:focus {
 }
 
 input[type=checkbox]:checked {
-    opacity: 35%;
+    opacity: 0.35;
 }
 
 input[type=checkbox]:checked + p{
-    opacity: 35%;
+    opacity: 0.35;
     text-decoration: line-through;
 }
 
@@ -106,7 +106,7 @@ input[type=text] {
 #addTodo-btn {
   font-weight: bold;
   background: var(--main-bg-color);
-  opacity: 100%;
+  opacity: 1;
 
   margin-left: -1em;
   padding: .5em 1.5em;
