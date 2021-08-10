@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 
 
 function TodoItem(props) {
-  const [completed, setCompleted] = useState(false);
+
   const [isBeingEdited, setBeingEdited] = useState(false);
   const [newText, setNewText] = useState(props.task.text);
 
